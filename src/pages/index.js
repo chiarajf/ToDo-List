@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.scss";
-import Modal from "@/components/modal";
+import AddTodo from "@/components/addTodo";
+import TodoList from "@/components/todoList";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-        <Modal />
+        <AddTodo />
+        <TodoList />
       </main>
     </>
   );

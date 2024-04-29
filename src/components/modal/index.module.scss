@@ -1,2 +1,59 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/variables.scss";
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($black, 0.5);
+  z-index: 10;
+  @include display(flex, column, center, center, 0, 0);
+
+  form {
+    background-color: $white;
+    padding: 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+
+    input {
+      width: 100%;
+      padding: 5px;
+      @include font("Montserrat", 500, 0.8rem, none, inherit, 0, inherit);
+      outline-color: transparent;
+      border: 1px solid $black;
+    }
+
+    textarea {
+      padding: 5px;
+      @include font("Montserrat", 500, 0.8rem, none, inherit, 0, inherit);
+      outline-color: transparent;
+      border: 1px solid $black;
+    }
+
+    select {
+      width: 100%;
+      @include font("Montserrat", 500, 0.8rem, none, inherit, 0, inherit);
+      outline-color: transparent;
+      border: 1px solid $black;
+    }
+
+    .button {
+      @include display(flex, column, center, center, 0, 0);
+      @include font("Montserrat", 600, 0.8rem, none, inherit, 1px, inherit);
+      display: inline-block;
+      padding: 6px 8px;
+      transition: all 0.3s ease;
+      background-color: $orange;
+      border: none;
+      border-radius: 5px;
+      color: #f2f2f2;
+      &:hover {
+        background-color: $lightGreen;
+      }
+    }
+  }
+}

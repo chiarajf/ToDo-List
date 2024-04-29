@@ -1,8 +1,9 @@
 import styles from "./index.module.scss";
 import DatePicker from "react-datepicker";
 import { useState, useEffect } from "react";
+import "react-datepicker/dist/react-datepicker.css";
 
-const Modal = () => {
+const Modal = ({ onClose }) => {
   const [time, setTime] = useState(new Date());
   const [date, setDate] = useState(new Date());
   const [content, setContent] = useState("");
@@ -31,17 +32,20 @@ const Modal = () => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
+      onClose();
     } catch (error) {}
   };
 
   return (
     <div className={styles.wrapper}>
       <form onSubmit={handleOnSubmit}>
-        <input
+        <textarea
+          rows="2"
           value={content}
           type="text"
           placeholder="What you have to do, today?"
           onChange={(e) => setContent(e.target.value)}
+          className={styles.message}
         />
         <label>
           <DatePicker
@@ -64,7 +68,7 @@ const Modal = () => {
             </option>
           ))}
         </select>
-        <input type="submit" value="Add Todo!" />
+        <input type="submit" value="Add Todo!" className={styles.button} />
       </form>
     </div>
   );
