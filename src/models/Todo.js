@@ -4,13 +4,12 @@ const todoSchema = new mongoose.Schema({
   username: {
     type: String,
     required: false,
-    default: "Username not provided",
+    default: "ChiaraJF",
   },
   avatar: {
     type: String,
     required: false,
-    default:
-      "https://source.boringavatars.com/marble/120/Maria%20Mitchell?colors=264653,2a9d8f,e9c46a,f4a261,e76f51",
+    default: "https://robohash.org/Chiara?set=set4",
   },
   todo_title: {
     type: String,

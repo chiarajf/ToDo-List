@@ -2,7 +2,7 @@
 @import "./variables.scss";
 
 .main {
-  padding: 6rem;
+  padding: 2rem;
   min-height: 100vh;
   @include display(flex, column, space-between, center, 0, 0);
 }
