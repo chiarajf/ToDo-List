@@ -1,0 +1,27 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.wrapper {
+  width: 100%;
+  max-width: 780px;
+  @include display(flex, row, space-between, center, 0, 0);
+
+  label {
+    margin: 0;
+
+    h2 {
+      @include font("Montserrat", 600, 1.8rem, none, inherit, 1px, 30px);
+    }
+
+    p {
+      @include font("Montserrat", 500, 1rem, none, inherit, 1px, 20px);
+    }
+  }
+}
+
+.image {
+  margin: 0;
+  border-radius: 100%;
+  border: 3px solid $lightGreen;
+  box-shadow: $box-shadow;
+}
