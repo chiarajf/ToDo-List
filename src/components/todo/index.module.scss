@@ -1,2 +1,96 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/variables.scss";
+
+.wrapper {
+  width: 100%;
+  max-width: 780px;
+  @include display(flex, column, flex-start, flex-start, 6px, 0);
+  box-shadow: $box-shadow;
+  padding: 3%;
+  border-radius: 14px;
+  position: relative;
+
+  .title {
+    @include display(flex, row, flex-start, center, 10px, 0);
+    padding: 6px;
+    border-radius: 2px;
+
+    h3 {
+      @include font("Montserrat", 600, 1.2rem, none, inherit, 0, 20px);
+      :first-letter {
+        text-transform: uppercase;
+      }
+      margin: 0;
+    }
+  }
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid $lightBlue;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  input[type="checkbox"]::after {
+    content: "✔";
+    @include font("Montserrat", 900, 0.85rem, none, inherit, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  input[type="checkbox"]:checked::after {
+    opacity: 1;
+    color: $lightBlue;
+  }
+
+  .close_button {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: $red;
+  }
+
+  .details {
+    @include display(flex, row, flex-start, center, 20px, 0);
+    p {
+      @include font("Montserrat", 500, 0.8rem, none, inherit, 0, 20px);
+      @include display(flex, row, flex-start, center, 4px, 0);
+
+      .category {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-radius: 100px;
+      }
+    }
+    .clock {
+      @include display(flex, row, flex-start, center, 20px, 0);
+      background-color: $white;
+      padding: 6px;
+      border-radius: 2px;
+    }
+  }
+
+  .edit {
+    @include display(flex, row, flex-start, center, 20px, 0);
+    @include font("Montserrat", 500, 0.8rem, none, inherit, 0, 20px);
+    padding: 5px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+  }
+}

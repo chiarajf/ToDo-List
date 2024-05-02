@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 import DatePicker from "react-datepicker";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import { useRouter } from "next/router";
 
@@ -8,10 +8,10 @@ const Modal = ({ onClose }) => {
   const [time, setTime] = useState(new Date());
   const [date, setDate] = useState(new Date());
   const [content, setContent] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Lavoro");
   const router = useRouter();
 
-  const categories = ["Work", "Personal", "Home"];
+  const categories = ["Lavoro", "Personale", "Casa"];
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ const Modal = ({ onClose }) => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <button className={styles.close_button} onClick={onClose}>
-          ❌
+          ✕
         </button>
         <form onSubmit={handleOnSubmit}>
           <textarea
@@ -75,7 +75,7 @@ const Modal = ({ onClose }) => {
               </option>
             ))}
           </select>
-          <input type="submit" value="Add Todo!" className={styles.button} />
+          <input type="submit" value="Aggiungi!" className={styles.button} />
         </form>
       </div>
     </div>
