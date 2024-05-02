@@ -36,10 +36,10 @@ const User = () => {
         </label>
         <Image
           className={styles.image}
-          src="https://robohash.org/Gusylenia?set=set4"
+          src="https://anitar.dev/get/r/150/38AECC"
           alt="Chiara"
-          width={100}
-          height={100}
+          width={70}
+          height={70}
         />
       </div>
     </>

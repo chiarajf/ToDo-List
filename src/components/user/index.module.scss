@@ -7,14 +7,17 @@
   @include display(flex, row, space-between, center, 0, 0);
 
   label {
-    margin: 0;
+    @include display(flex, column, flex-start, flex-start, 5px, 0);
 
     h2 {
-      @include font("Montserrat", 600, 1.8rem, none, inherit, 1px, 30px);
+      @include font("Montserrat", 600, 1.8rem, none, inherit, 0, 30px);
+      margin: 0;
     }
 
     p {
-      @include font("Montserrat", 500, 1rem, none, inherit, 1px, 20px);
+      @include font("Montserrat", 500, 1rem, none, inherit, 0, 20px);
+      color: #717171;
+      margin: 0;
     }
   }
 }
@@ -22,6 +25,8 @@
 .image {
   margin: 0;
   border-radius: 100%;
-  border: 3px solid $lightGreen;
+  border: 4px solid $white;
+  outline: 3px solid $lightBlue;
+
   box-shadow: $box-shadow;
 }
