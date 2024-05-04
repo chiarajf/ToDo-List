@@ -1,3 +1,3 @@
-import AddTodo from "./addTodo";
+import AddTodo from "./AddTodo";
 
 export default AddTodo;
