@@ -1,10 +1,10 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.scss";
-import AddTodo from "@/components/addTodo";
-import TodoList from "@/components/todoList";
-import User from "@/components/user";
+import styles from "../styles/Home.module.scss";
+import AddTodo from "../components/addTodo";
+import TodoList from "../components/todoList";
+import User from "../components/user";
 import { useState } from "react";
-import Calendar from "@/components/calendar";
+import Calendar from "../components/calendar";
 
 export default function Home() {
   const [showDetails, setShowDetails] = useState(false);
