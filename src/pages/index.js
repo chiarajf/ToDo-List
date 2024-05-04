@@ -5,7 +5,6 @@ import TodoList from "@/components/todoList";
 import User from "@/components/user";
 import { useState } from "react";
 import Calendar from "@/components/calendar";
-import Details from "@/components/details";
 
 export default function Home() {
   const [showDetails, setShowDetails] = useState(false);
