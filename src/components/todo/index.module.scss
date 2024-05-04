@@ -4,7 +4,7 @@
 .wrapper {
   width: 100%;
   max-width: 780px;
-  @include display(flex, column, flex-start, flex-start, 6px, 0);
+  @include display(flex, column, flex-start, flex-start, 0, 0 0 40px 0);
   box-shadow: $box-shadow;
   padding: 3%;
   border-radius: 14px;
@@ -54,7 +54,7 @@
 
   .close_button {
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 0px;
     background: none;
     border: none;
@@ -67,12 +67,12 @@
     @include display(flex, row, flex-start, center, 20px, 0);
     p {
       @include font("Montserrat", 500, 0.8rem, none, inherit, 0, 20px);
-      @include display(flex, row, flex-start, center, 4px, 0);
+      @include display(flex, row, flex-start, center, 10px, 0);
 
       .category {
         display: inline-block;
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
         border-radius: 100px;
       }
     }

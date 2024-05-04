@@ -42,15 +42,16 @@ const Modal = ({ onClose }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
+        <h3>Aggiungi Task</h3>
         <button className={styles.close_button} onClick={onClose}>
           ✕
         </button>
         <form onSubmit={handleOnSubmit}>
           <textarea
-            rows="2"
+            rows="1"
             value={content}
             type="text"
-            placeholder="What you have to do, today?"
+            placeholder="Cosa devi fare oggi?"
             onChange={(e) => setContent(e.target.value)}
             className={styles.message}
           />
