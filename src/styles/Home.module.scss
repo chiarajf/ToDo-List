@@ -4,5 +4,5 @@
 .main {
   padding: 2rem;
   min-height: 100vh;
-  @include display(flex, column, space-between, center, 0, 0);
+  @include display(flex, column, flex-start, center, 0, 0);
 }
